@@ -1,0 +1,10 @@
+# Mac system files
+.DS_Store
+
+# Java Compiled files
+*.class
+
+# If you use an IDE like IntelliJ or VS Code
+.idea/
+.vscode/
+bin/
