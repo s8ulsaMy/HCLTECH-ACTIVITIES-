@@ -1,3 +1,4 @@
+package Banking_Project;
 public class Bank {
     private String bankName;
     private static double totalBankBalance = 0;

@@ -1,3 +1,4 @@
+package Banking_Project;
 public class BankingDemo {
     public static void main(String[] args) {
         // Segregating References and Objects
