@@ -1,5 +1,4 @@
 abstract class Database {
-
     String username, password, url;
     static int count = 0;
 
@@ -9,69 +8,36 @@ abstract class Database {
         this.url = url;
         count++;
     }
-
     abstract void display();
 }
 
 class Oracle extends Database {
-
-    private Oracle(String u, String p, String url) {
-        super(u, p, url);
-    }
-
+    private Oracle(String u, String p, String url) { super(u, p, url); }
     public static Oracle getInstance(String u, String p, String url) {
-        if (count < 10)
-            return new Oracle(u, p, url);
-        else
-            return null;
+        return (count < 10) ? new Oracle(u, p, url) : null;
     }
-
-    void display() {
-        System.out.println("Oracle → " + username + " " + url);
-    }
+    void display() { System.out.println("Oracle -> " + username); }
 }
 
 class MySql extends Database {
-
-    private MySql(String u, String p, String url) {
-        super(u, p, url);
-    }
-
+    private MySql(String u, String p, String url) { super(u, p, url); }
     public static MySql getInstance(String u, String p, String url) {
-        if (count < 10)
-            return new MySql(u, p, url);
-        else
-            return null;
+        return (count < 10) ? new MySql(u, p, url) : null;
     }
-
-    void display() {
-        System.out.println("MySQL → " + username + " " + url);
-    }
+    void display() { System.out.println("MySQL -> " + username); }
 }
 
 class SQLServer extends Database {
-
-    private SQLServer(String u, String p, String url) {
-        super(u, p, url);
-    }
-
+    private SQLServer(String u, String p, String url) { super(u, p, url); }
     public static SQLServer getInstance(String u, String p, String url) {
-        if (count < 10)
-            return new SQLServer(u, p, url);
-        else
-            return null;
+        return (count < 10) ? new SQLServer(u, p, url) : null;
     }
-
-    void display() {
-        System.out.println("SQLServer → " + username + " " + url);
-    }
+    void display() { System.out.println("SQLServer -> " + username); }
 }
 
 public class exercise {
     public static void main(String[] args) {
-
         Database[] db = new Database[10];
-
         db[0] = Oracle.getInstance("scott", "tiger", "oracle.com");
         db[1] = MySql.getInstance("root", "123", "mysql.com");
         db[2] = SQLServer.getInstance("admin", "abc", "sql.com");
@@ -83,16 +49,11 @@ public class exercise {
         db[8] = SQLServer.getInstance("u6", "p6", "s2");
         db[9] = Oracle.getInstance("u7", "p7", "o3");
 
-        // display 10 objects
-        for (Database d : db)
-            if (d != null)
-                d.display();
+        for (Database d : db) {
+            if (d != null) d.display();
+        }
 
-        // try to create 11th object
         Database extra = MySql.getInstance("extra", "111", "notallowed");
-
-        if (extra == null)
-            System.out.println("Cannot create more than 10 objects ❌");
+        if (extra == null) System.out.println("\nLimit reached: Max 10 objects. ❌");
     }
 }
-
