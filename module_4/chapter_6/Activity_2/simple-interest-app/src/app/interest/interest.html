@@ -1,0 +1,17 @@
+<h2>Simple Interest Calculator</h2>
+
+<label>Principal:</label>
+<input type="number" [(ngModel)]="principal">
+<br><br>
+
+<label>Rate:</label>
+<input type="number" [(ngModel)]="rate">
+<br><br>
+
+<label>Time:</label>
+<input type="number" [(ngModel)]="time">
+<br><br>
+
+<button (click)="calculateSI()">Calculate</button>
+
+<h3>Simple Interest = {{ simpleInterest }}</h3>

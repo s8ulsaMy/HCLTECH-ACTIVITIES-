@@ -1,5 +1,0 @@
-package BankImpl;
-
-public class SavingsAcc {
-    
-}

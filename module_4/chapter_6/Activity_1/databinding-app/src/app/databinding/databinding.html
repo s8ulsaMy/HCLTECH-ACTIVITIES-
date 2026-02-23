@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+
+<h2>Hello {{ name }}</h2>
+
+<hr>
+
+<h3>Property Binding</h3>
+<img [src]="imageUrl" width="150">
+
+<hr>
+
+<h3>Two Way Data Binding</h3>
+
+<input type="text" [(ngModel)]="inputText" placeholder="Enter text">
+
+<p>You typed: {{ inputText }}</p>
