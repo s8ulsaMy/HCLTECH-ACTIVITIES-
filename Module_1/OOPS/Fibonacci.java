@@ -1,3 +1,5 @@
+package OOPS;
+
 public class Fibonacci {
     public static void main(String[] args) {
         int n = 10; // Number of terms to print
