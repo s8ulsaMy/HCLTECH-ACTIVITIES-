@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Cost</title>
+</head>
+
+<body>
+
+<h2>Ticket Cost Details</h2>
+
+<p id="output"></p>
+
+<script>
+    // Get values from URL
+    const params = new URLSearchParams(window.location.search);
+
+    let name = params.get("name");
+    let source = params.get("source");
+    let destination = params.get("destination");
+    let tickets = parseInt(params.get("tickets"));
+    let cls = params.get("class");
+
+    // Price logic
+    let price = (cls === "business") ? 1000 : 500;
+    let total = tickets * price;
+
+    // Display result
+    document.getElementById("output").innerHTML =
+        "Name: " + name + "<br>" +
+        "From: " + source + "<br>" +
+        "To: " + destination + "<br>" +
+        "Class: " + cls + "<br>" +
+        "Tickets: " + tickets + "<br><br>" +
+        "<b>Total Cost: ₹" + total + "</b>";
+</script>
+
+</body>
+</html>

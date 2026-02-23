@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Booking</title>
+</head>
+
+<body>
+
+<h2>Ticket Booking Form</h2>
+
+<form action="calc_cost.html" method="get">
+    
+    Name:
+    <input type="text" name="name" required><br><br>
+
+    Source:
+    <input type="text" name="source" required><br><br>
+
+    Destination:
+    <input type="text" name="destination" required><br><br>
+
+    Number of Tickets:
+    <input type="number" name="tickets" min="1" required><br><br>
+
+    Class:
+    <select name="class">
+        <option value="economy">Economy (₹500)</option>
+        <option value="business">Business (₹1000)</option>
+    </select><br><br>
+
+    <button type="submit">Calculate Cost</button>
+
+</form>
+
+</body>
+</html>

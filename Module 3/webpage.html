@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software Company</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left {
+            width: 25%;
+            background: #2c3e50;
+            padding-top: 20px;
+        }
+
+        .left a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        .left a:hover {
+            background: #34495e;
+        }
+
+        .right {
+            width: 75%;
+            padding: 30px;
+            background: #ecf0f1;
+        }
+    </style>
+
+    <script>
+        function showContent(page) {
+            const content = {
+                home: "<h2>Home</h2><p>Welcome to our Software Company. We build modern applications.</p>",
+                
+                about: "<h2>About Us</h2><p>We are a leading software company delivering quality solutions.</p>",
+                
+                clients: "<h2>Clients</h2><p>We work with global clients in IT and business sectors.</p>",
+                
+                careers: "<h2>Careers</h2><p>Join our team! We offer exciting career opportunities.</p>",
+                
+                contact: "<h2>Contact Us</h2><p>Email: info@softwareco.com<br>Phone: +91 9876543210</p>"
+            };
+
+            document.getElementById("content").innerHTML = content[page];
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Left Pane -->
+    <div class="left">
+        <a href="#" onclick="showContent('home')">Home</a>
+        <a href="#" onclick="showContent('about')">About Us</a>
+        <a href="#" onclick="showContent('clients')">Clients</a>
+        <a href="#" onclick="showContent('careers')">Careers</a>
+        <a href="#" onclick="showContent('contact')">Contact Us</a>
+    </div>
+
+    <!-- Right Pane -->
+    <div class="right" id="content">
+        <h2>Welcome</h2>
+        <p>Click a link on the left to see content.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
