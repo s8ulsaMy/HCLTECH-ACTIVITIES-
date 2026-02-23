@@ -1,6 +1,6 @@
 static int totalQty = 0;
 
-public Accessories(int q, int id, String desc) {
+public Accessories (int q, int id, String desc) {
     super(q, 5);
     totalQty += q;
 }

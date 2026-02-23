@@ -1,3 +1,6 @@
+package OOPS;
+//TaxCalculator
+
 public class Activity_2 {
 public static void main(String[] args) {
 // Example inputs

@@ -1,3 +1,6 @@
+package OOPS;
+//shop app
+
 import java.util.Scanner;
 
 public class Activity_5{
@@ -32,5 +35,6 @@ public class Activity_5{
             }
         }
         System.out.printf("Total Retail Value: $%.2f\n", totalRetailValue);
+        sc.close();
     }
 }

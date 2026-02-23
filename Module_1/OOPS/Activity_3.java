@@ -1,3 +1,6 @@
+package OOPS;
+//swap two numbers without using a temporary variable
+
 import java.util.Scanner;
 
 public class Activity_3 {
